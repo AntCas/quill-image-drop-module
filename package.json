@@ -1,15 +1,17 @@
 {
-  "name": "quill-image-drop-module",
+  "name": "@antcas/quill-image-drop-module",
   "version": "1.0.3",
-  "description": "A module for Quill rich text editor to allow images to be pasted and drag/dropped into the editor.",
+  "description": "A module for Quill rich text editor to allow images to be pasted and drag/dropped into the editor. - Now published transpiled to es5 `",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "sh ./bin/release.sh"
+    "release": "sh ./bin/release.sh",
+    "compile": "babel src --out-dir lib",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kensnyder/quill-image-drop-module.git"
+    "url": "git+https://github.com/AntCas/quill-image-drop-module"
   },
   "keywords": [
     "quill",
@@ -21,16 +23,12 @@
     "drop",
     "paste"
   ],
-  "author": "@kensnyder",
+  "author": "@antcas",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kensnyder/quill-image-drop-module/issues"
-  },
-  "homepage": "https://github.com/kensnyder/quill-image-drop-module#readme",
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-preset-env": "^1.2.2",
-    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2015": "^6.24.1",
     "uglify-js": "^2.8.13"
   },
   "dependencies": {
